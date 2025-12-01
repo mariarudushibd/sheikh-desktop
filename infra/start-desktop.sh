@@ -17,5 +17,5 @@ x11vnc -display :1 -nopw -forever -shared -listen 0.0.0.0 &>/tmp/x11vnc.log &
 # start noVNC (websockify)
 cd /opt/noVNC && ./utils/novnc_proxy --vnc localhost:5900 --listen 6080 &>/tmp/novnc.log &
 
-# simple keepalive
+# Keep container alive
 tail -f /dev/null
