@@ -1,16 +1,16 @@
 {
-  "name": "manager",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sheikh-desktop-manager",
+  "version": "0.1.0",
+  "description": "Manager for Sheikh Desktop Sandbox - session lifecycle & LLM adapter",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dockerode": "^3.3.4",
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "dockerode": "^3.3.0",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "ws": "^8.13.0"
   }
 }

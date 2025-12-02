@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM registry.launchpad.net/ubuntu/ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
@@ -14,7 +14,7 @@ RUN git clone --depth 1 https://github.com/novnc/noVNC.git /opt/noVNC && \
 RUN useradd -m -s /bin/bash sandbox
 WORKDIR /home/sandbox
 
-COPY start-desktop.sh /usr/local/bin/start-desktop.sh
+COPY infra/start-desktop.sh /usr/local/bin/start-desktop.sh
 RUN chmod +x /usr/local/bin/start-desktop.sh
 
 EXPOSE 5900 6080
